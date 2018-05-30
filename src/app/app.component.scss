@@ -1,0 +1,58 @@
+.root {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+
+i {
+  margin: 0 1% 0 1%;
+}
+.fa-facebook-square {
+  color: #3b5999;
+}
+.fa-instagram {
+  color: #fff;
+  border-radius: 4px;
+    background: #f09433; 
+background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.fa-pinterest {
+  color: #bd081c;
+}
+.fa-twitter-square {
+  color: #55acee;
+}
+.fa-etsy {
+  color: #f26223;
+}
+
+  p {
+    position: relative;
+    z-index: 100;
+    color: lightslategray;
+    margin:2px;
+    text-align: left;
+    font: 0.7em Arial, sans-serif;
+  }
+  .footer {
+    margin-top: 5px;
+    margin-left: 3%;
+  }
+}
+.lotus {
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+@media screen and (max-width: 500px) {
+  .lotus {
+    width: 20%;
+    height: auto;
+    padding-bottom: 3%;
+    transition: all 2s;
+  }
+}

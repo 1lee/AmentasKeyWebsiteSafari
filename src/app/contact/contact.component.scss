@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.page-wrapper {
+    min-height: calc(100vh - 100px);
+    width: 100%;
+
+    background-image: url("../../assets/img/contact.jpg");
+    z-index: 0;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+h1 {
+    text-align: center;
+    color: #757575;
+    padding-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.web-form {
+    position: relative;
+    top: 8vh;
+    opacity: 0.8;
+    margin: auto;
+    color: #fff;
+    background-color: #fff;
+    height: 68vh;
+    width: 50vw;
+    border-radius: 9px;
+    transition: all 1s;
+}
+
+form {
+    height: 40%;
+    padding: 2%;
+}
+
+input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    padding-top: 4%;
+}
+textarea {
+    margin-top: 5%;
+    height: 40%;
+    width: 100%;
+}
+button {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: none;
+    padding: 5px;
+    float: right;
+    background-color: lightslategray;
+    border-radius: 5px;
+
+}
+@media screen and (max-width: 400px) {
+    .web-form {
+        width: 75vw;
+    }
+    .textarea {
+        height: 60%;
+    }
+}

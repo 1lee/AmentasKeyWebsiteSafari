@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Raleway:900');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Raleway:900');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.bg {
+
+  min-height: calc(100vh - 100px);
+  max-height: calc(100vh - 100px);
+  width: 100%;
+  background-image: url("../../assets/img/AXblack.png");
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+    overflow-y: auto;
+}
+
+.content {
+    min-height: calc(100vh - 100px);
+  max-height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 2%;
+
+}
+.photos {
+display: flex;
+flex-direction: column;
+width: 25%;
+
+figure {
+    text-align: center;
+}
+  .profile-pic {
+      position: relative;
+      height: 15vh;
+      width: auto;
+      margin: 15px 10px 5px 10px;
+      border-radius: 50%;
+        }
+}
+
+.text-blocks {
+    height: auto;
+    width: 74%;
+    padding: 7px;
+}
+.about-us {
+    margin-bottom: 11px;
+    width: 80%;
+}
+.blurb {
+    height: auto;
+    width: 100%;
+
+    p {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 0.9em;
+        color: cadetblue;  
+    }
+}
+.collections {
+    margin-top: 11px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+h1 {
+    font-family: 'Raleway', sans-serif;
+    color:cadetblue;
+}
+article {
+    width: 32%;
+    height: auto;
+    font-size: 0.8em;
+    padding: 4px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .collections {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    article {
+        width: 99%;
+    }
+}
+@media screen and (max-width: 300px) {
+        h1 {
+        font-size: 0.85em;
+    }
+    .photos {
+        display: none;
+    }
+}

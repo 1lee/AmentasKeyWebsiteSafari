@@ -1,0 +1,20 @@
+
+<div class="main-header">
+
+<button md-icon-button [mdMenuTriggerFor]="menu">
+  <md-icon>more_vert</md-icon>
+</button>
+<md-menu #menu="mdMenu">
+ <a [routerLink]="['']" class="home-link"><md-icon>home</md-icon>   Home</a>
+  
+
+    <a [routerLink]="['/about']" class="about-link"><md-icon>info</md-icon>   About</a>
+
+
+   <a [routerLink]="['/contact']" class="contact-link"><md-icon>message</md-icon>   Contact</a>
+
+</md-menu>
+  <a [routerLink]="['']" id="title"><span>{{ title }}</span></a>
+  <span class="example-fill-remaining-space"></span>
+  <img src="../assets/img/feather180.png" class="feather">
+</div>

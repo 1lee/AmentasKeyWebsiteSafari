@@ -1,0 +1,1 @@
+"use strict";var router_1=require("@angular/router"),home_component_1=require("./home/home.component"),create_component_1=require("./create.component"),APP_ROUTES=[{path:"",component:home_component_1.HomeComponent},{path:"create",component:create_component_1.CreateComponent}];exports.routing=router_1.RouterModule.forRoot(APP_ROUTES);

@@ -1,0 +1,186 @@
+@font-face {
+    font-family: Syabab;
+    src: url(../../assets/fonts/Syabab.ttf);
+}
+
+@mixin boxdimensions {
+  position: relative;
+  border: 0.5px solid rgb(192,111,169);
+  min-height: 99.8%;
+  width: 49.6%;
+  &:hover {
+    border: 1px solid #fff;
+    z-index: 900;
+  }
+}
+@mixin bgimages {
+  z-index: 0;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center bottom;
+  &:hover {-webkit-transform: scale(1.10, 1.10);transform: scale(1.10, 1.10);
+          box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+          -webkit-transition: all 3s;
+          transition: all 3s;
+
+  }
+}
+@mixin verticalalign {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+
+
+
+.front-page {
+  min-height: calc(100vh - 100px); /*determines height of footer*/
+  background-color: papayawhip;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+.title-box {
+  @include verticalalign;
+  margin: 0 25% 0 25%;
+  height: 30%;
+  width: 50%;
+  border: 10px solid #fff;
+  border-radius: 12px;
+  position: absolute;
+  padding-top: 7%;
+  top: 50%;
+  color: #fff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font: 2em Syabab, cursive;
+  text-align: center;
+}
+
+.create {
+  @include bgimages;
+  @include boxdimensions;
+  background-color: lightgoldenrodyellow;
+  background-image: url("../../assets/img/CREATEwatercolor600a.jpg");
+  
+}
+.shop {
+  @include bgimages;
+  @include boxdimensions;
+  background-color: floralwhite;
+  background-image: url("../../assets/img/SHOPstarrynight600.jpg");
+}
+
+.blog {
+  @include bgimages;
+  @include boxdimensions;
+  background-color: lavenderblush;
+ background-image: url("../../assets/img/BLOGrelaxing600.jpg");
+ 
+  .blog-text {
+    position: absolute;
+    color: #fff;
+    bottom: 1%;
+    left: 10px;
+    font: 2em Syabab, cursive;
+  }
+  &:hover {
+    .blog-text {
+      margin-left:10%;
+      -webkit-transition: margin-left 3s;
+      transition: margin-left 3s;
+    }
+  }
+}
+.vip {
+  @include bgimages;
+  @include boxdimensions;
+  position: relative;
+  background-color: lightsteelblue;
+  background-image: url("../../assets/img/artisan-skincare-soy.jpg");
+  .vip-text {
+    position: absolute;
+    color: #fff;
+    bottom: 5px;
+    right: 10px;
+    width: 66%;
+    font: 2em Syabab, cursive;
+    text-align: right;
+  }
+  &:hover {
+    .vip-text {
+      margin-right: 10%;
+      -webkit-transition: margin-right 3s;
+      transition: margin-right 3s;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .front-page {
+    min-height: calc(100vh - 100px); /*determines height of footer*/
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  .create, .shop, .blog, .vip {
+    height: calc(25vh - 25px);
+    width: 100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .title-box {
+    border: none;
+    p {
+      top: 0;
+      -webkit-transform: translateY(-75%);
+              transform: translateY(-75%);
+    }
+  }
+  #blog-text {
+    text-align: center;
+    position: initial;
+    &:hover {
+      margin-left: 0;
+    }
+  }
+  #vip-text {
+    text-align: center;
+    position: initial;
+    width: 100%;
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    &:hover {
+      margin-right: 0;
+    }
+  }
+}
+@media screen and (max-height: 470px) {
+  #vip-text {
+    width: 100%;
+    -webkit-transform: translateY(33%);
+            transform: translateY(33%);
+  }
+  #blog-text {
+    -webkit-transform: translateY(33%);
+            transform: translateY(33%);
+  }
+}
